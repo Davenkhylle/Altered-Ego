@@ -1,34 +1,45 @@
 package states;
 
+import graphics.GraphicManager;
+import utils.GameState;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import utils.GameState;
-
 public class Title extends JPanel implements State {
     private final StateManager stateManager;
+    private GraphicManager graphics;
+
+    private BufferedImage[] titleScreen;
 
     public Title(StateManager stateManager) {
         this.stateManager = stateManager;
-
         setLayout(null);
-
-        createState();
+        setGraphics();
+        createButtons();
     }
 
     @Override
-    public void createState() {
-        JLabel label = new JLabel("Alter Ego", SwingConstants.CENTER);
-        label.setBounds(140, 120, 500, 100);
-        label.setFont(new Font("Times New Roman", Font.BOLD, 70));
-        label.setForeground(Color.BLACK);
-        add(label);
+    public void setGraphics() {
+        graphics = new GraphicManager();
+        graphics.setBounds(0, 0, 800, 800);
+        graphics.loadAnimation("/title_screen_sprite.png", 8, 1024, 1024);
 
-        JButton playButton = new JButton("Play");
-        playButton.setBounds(305, 350, 150, 40);
-        playButton.setFont(new Font("Times New Roman", Font.BOLD, 10));
+        add(graphics);
+    }
+
+    @Override
+    public void createLabels() {
+
+    }
+
+    @Override
+    public void createButtons() {
+        JButton playButton = new JButton();
+        playButton.setBounds(150, 452, 150, 50);
         playButton.setBackground(Color.WHITE);
         playButton.setForeground(Color.BLACK);
 
@@ -42,9 +53,8 @@ public class Title extends JPanel implements State {
 
         add(playButton);
 
-        JButton exitButton = new JButton("Exit");
-        exitButton.setBounds(305, 450, 150, 40);
-        exitButton.setFont(new Font("Times New Roman", Font.BOLD, 10));
+        JButton exitButton = new JButton("");
+        exitButton.setBounds(425, 452, 150, 50);
         exitButton.setBackground(Color.WHITE);
         exitButton.setForeground(Color.BLACK);
 

@@ -1,5 +1,7 @@
 package states;
 
 public interface State {
-    void createState();
+    void setGraphics();
+    void createLabels();
+    void createButtons();
 }
