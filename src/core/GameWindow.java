@@ -5,7 +5,8 @@ import javax.swing.*;
 public class GameWindow extends JFrame {
     public GameWindow() {
         setTitle("Altered Ego");
-        setSize(800, 600);
+        setSize(720, 720);
+        setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
