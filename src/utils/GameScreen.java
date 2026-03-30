@@ -5,5 +5,5 @@ public enum GameScreen {
     SELECT_MODE,
     SELECT_CHARACTER,
     BATTLE,
-    RESULT;
+    RESULT
 }
