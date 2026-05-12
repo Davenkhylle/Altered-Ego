@@ -58,7 +58,11 @@ public class CharacterSelect extends ScreenBase {
             characterButtons.put(gc, btn);
         }
 
-        JButton backButton = createButton("Back", 255, 585, 200, 50);
+        JButton backButton = createButton("", 335, 530, 50, 30);
+        backButton.setOpaque(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setBorderPainted(false);
+        backButton.setFocusable(false);
         backButton.addActionListener(e -> {
             Audio.startBGM("/soundtracks/Voltaic.wav");
             screen.changeScreen(ScreenState.SELECT_MODE);

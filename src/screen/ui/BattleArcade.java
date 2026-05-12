@@ -115,27 +115,27 @@ public class BattleArcade extends ScreenBase {
         roundLabel = createLabel("Fight 1", 255, 10, 200, 25);
         roundLabel.setHorizontalAlignment(SwingConstants.CENTER);
         roundLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        roundLabel.setForeground(Color.DARK_GRAY);
+        roundLabel.setForeground(Color.WHITE);
 
         arcadeProgressLabel = createLabel("", 255, 35, 200, 20);
         arcadeProgressLabel.setHorizontalAlignment(SwingConstants.CENTER);
         arcadeProgressLabel.setFont(new Font("Arial", Font.BOLD, 13));
-        arcadeProgressLabel.setForeground(new Color(0x8B4513));
+        arcadeProgressLabel.setForeground(Color.WHITE);
 
         countdownLabel = createLabel("", 330, 58, 50, 25);
         countdownLabel.setHorizontalAlignment(SwingConstants.CENTER);
         countdownLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        countdownLabel.setForeground(Color.RED);
+        countdownLabel.setForeground(Color.WHITE);
 
         turnLabel = createLabel("", 155, 160, 400, 30);
         turnLabel.setHorizontalAlignment(SwingConstants.CENTER);
         turnLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        turnLabel.setForeground(Color.DARK_GRAY);
+        turnLabel.setForeground(Color.WHITE);
 
         combatLog = createLabel("", 55, 475, 600, 30);
         combatLog.setHorizontalAlignment(SwingConstants.CENTER);
         combatLog.setFont(new Font("Arial", Font.ITALIC, 14));
-        combatLog.setForeground(Color.DARK_GRAY);
+        combatLog.setForeground(Color.WHITE);
 
         // ── Action buttons ────────────────────────────────────────────────────
         basicAttackButton = createButton("Basic Attack", 255, 530, 200, 50);
@@ -155,6 +155,7 @@ public class BattleArcade extends ScreenBase {
      */
     @Override
     protected void onAnimationTick() {
+        bgGraphic.update();
         p1Graphic.update();
         p2Graphic.update();
     }
@@ -165,6 +166,7 @@ public class BattleArcade extends ScreenBase {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        bgGraphic.draw(g, BG_BOUNDS[0], BG_BOUNDS[1], BG_BOUNDS[2], BG_BOUNDS[3]);
         p1Graphic.draw(g,
                 P1_SPRITE_BOUNDS[0], P1_SPRITE_BOUNDS[1],
                 P1_SPRITE_BOUNDS[2], P1_SPRITE_BOUNDS[3]);

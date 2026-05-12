@@ -7,5 +7,6 @@ public enum ScreenState {
     BATTLE,
     BATTLE_ARCADE,
     RESULT,
-    RESULT_ARCADE
+    RESULT_ARCADE,
+    CREDITS
 }

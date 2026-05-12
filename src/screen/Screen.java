@@ -16,6 +16,7 @@ public class Screen {
     private final BattleArcade battleArcade;
     private final Result result;
     private final ResultArcade resultArcade;
+    private final Credits credits;
 
     private final GameBattle gameBattle;
 
@@ -29,6 +30,7 @@ public class Screen {
         battleArcade = new BattleArcade(this);
         result = new Result(this);
         resultArcade = new ResultArcade(this);
+        credits = new Credits(this);
 
         gameBattle = new GameBattle();
 
@@ -48,6 +50,7 @@ public class Screen {
             case BATTLE_ARCADE -> battleArcade;
             case RESULT -> result;
             case RESULT_ARCADE -> resultArcade;
+            case CREDITS -> credits;
         };
 
         if(gameScreen == ScreenState.TITLE) {

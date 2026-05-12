@@ -23,7 +23,6 @@ Five random people bought an old game console in a store on the same day. The ga
   - Player will be prompted if they want to do another round, else it will display the results.
 - Arcade Mode
   - The player will choose a character (random pick is optional).
-  - Enemies are picked randomly. Final boss will appear after you defeat all 5 enemies.
   - Player will regenerate health and mana after defeating an enemy.
   - Player is required to defeat all enemies.
 

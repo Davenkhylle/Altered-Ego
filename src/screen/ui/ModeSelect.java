@@ -74,6 +74,14 @@ public class ModeSelect extends ScreenBase {
             Audio.startBGM("/soundtracks/Beauty_Flow.wav");
             screen.changeScreen(ScreenState.TITLE);
         });
+        JButton credits = createButton("", 295, 530, 128, 20);
+        credits.setOpaque(false);
+        credits.setContentAreaFilled(false);
+        credits.setBorderPainted(false);
+        credits.setFocusable(false);
+        credits.addActionListener(e -> {
+            screen.changeScreen(ScreenState.CREDITS);
+        });
     }
 
     @Override

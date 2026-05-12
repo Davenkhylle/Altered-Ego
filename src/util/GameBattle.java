@@ -106,8 +106,8 @@ public class GameBattle {
         int healAmount = 50;
         int manaAmount = 20;
 
-        healAmount *= random.nextInt(1, 10);
-        manaAmount *= random.nextInt(5, 10);
+        healAmount *= random.nextInt(6, 10);
+        manaAmount *= random.nextInt(6, 10);
 
         p1Entity.healHP(healAmount);
         p1Entity.healMana(manaAmount);
